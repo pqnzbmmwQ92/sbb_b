@@ -46,7 +46,7 @@ async def load_plugins(folder):
 async def startupmessage():
     try:
         if BOTLOG:
-            Config.CATUBLOGO = await iqqhtani.tgbot.send_file(BOTLOG_CHATID, "https://telegra.ph/file/2ed67fafed303714aabe4.jpg", caption="✪ ⦙ تـمّ  اعـادة تشـغيل\n سورس ايــثــون ✓  :  [ 7.6 ] .\n\n✪ ⦙ للحصول على اوامر السورس\n أرسـل : (  `.اوامري`  ) \n\n✪ ⦙ لمـعرفة كيفية تغير بعض كلايش\n او صور السـورس  أرسـل  :\n (  `.مساعده`  )\n\n✪ ⦙ القناة الرسمية سورس ايــثــون : @EITHON1\n✪ ⦙ فارات سورس سورس ايــثــون :@EIT_2 \n✪ ⦙ كلايش سورس كوبرا:  @EITH_0\n ✪ ⦙التحديثات والاضافات :  @EITHON1\n",                buttons=[(Button.url("مطور سورس ايــثــون", "https://t.me/TTTLL0"),)],            )
+            Config.CATUBLOGO = await iqqhtani.tgbot.send_file(BOTLOG_CHATID, "https://telegra.ph/file/2ed67fafed303714aabe4.jpg", caption="✪ ⦙ تـمّ  اعـادة تشـغيل\n سورس ايــثــون ✓  :  [ 7.6 ] .\n\n✪ ⦙ للحصول على اوامر السورس\n أرسـل : (  `.اوامري`  ) \n\n✪ ⦙ لمـعرفة كيفية تغير بعض كلايش\n او صور السـورس  أرسـل  :\n (  `.مساعده`  )\n\n✪ ⦙ القناة الرسمية سورس ايــثــون : @EITHON1\n✪ ⦙ فارات سورس سورس ايــثــون :@EIT_2 \n✪ ⦙ كلايش سورس ايــثــون:  @EITH_0\n ✪ ⦙التحديثات والاضافات :  @EITHON1\n",                buttons=[(Button.url("مطور سورس ايــثــون", "https://t.me/TTTLL0"),)],            )
     except Exception as e:
         LOGS.error(e)
         return None
