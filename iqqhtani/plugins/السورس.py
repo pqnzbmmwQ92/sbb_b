@@ -53,7 +53,7 @@ from telethon import client, events
 ALIVE = gvarstatus("OR_ALIVE") or "(فحص|السورس)"
 UPDATE = gvarstatus("OR_UPDATE") or "(اعاده تشغيل|تحديث)"
 ORDERS = gvarstatus("OR_ORDERS") or "(الاوامر|ألاوامر|اوامري|أوامري|م)"
-IqqhtaniPC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/08f476776b6e578dd9f9e.mp4"
+IqqhtaniPC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/1b62f55aaf2c8b5473a02.jpg"
 LOGS = logging.getLogger(os.path.basename(__name__))
 LOGS1 = logging.getLogger(__name__)
 ppath = os.path.join(os.getcwd(), "temp", "githubuser.jpg")
@@ -69,7 +69,7 @@ vlist = [    "ALIVE_PIC",    "ALIVE_EMOJI",    "ALIVE_TELETHONIQ",    "ALIVE_TEX
 DELETE_TIMEOUT = 5
 thumb_image_path = os.path.join(Config.TMP_DOWNLOAD_DIRECTORY, "thumb_image.jpg")
 oldvars = {    "PM_PIC": "pmpermit_pic",    "PM_TEXT": "pmpermit_txt",    "PM_BLOCK": "pmblock",}
-IQPIC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/08f476776b6e578dd9f9e.mp4"
+IQPIC = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/1b62f55aaf2c8b5473a02.jpg"
 def convert_from_bytes(size):
     power = 2 ** 10
     n = 0
@@ -90,7 +90,7 @@ async def iq(iqqhtanievent):
     _, check_sgnirts = check_data_base_heal_th()
     EMOJI = gvarstatus("ALIVE_EMOJI") or "✪︙"
     ALIVE_TEXT = gvarstatus("ALIVE_TEXT") or "اهلا وسهلا بك عزيزي في سورس  Ξ𝗜𝗧𝗛𝗢𝗡™ 𓃠"
-    Iqqhtani_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/2ed67fafed303714aabe4.jpg"
+    Iqqhtani_IMG = gvarstatus("ALIVE_PIC") or "https://telegra.ph/file/1b62f55aaf2c8b5473a02.jpg"
     tg_bot = Config.TG_BOT_USERNAME
     me = await iqqhtanievent.client.get_me()
     my_last = me.last_name
