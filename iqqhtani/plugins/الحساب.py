@@ -82,7 +82,7 @@ STAT_INDICATION = " ✪ ⦙   جـاري جـمـع الإحصـائيـات ، 
 CHANNELS_STR = " ✪ ⦙   قائمة القنوات التي أنت فيها موجودة هنا\n\n"
 CHANNELS_ADMINSTR = " ✪ ⦙  قائمة القنوات التي تديرها هنا **\n\n"
 CHANNELS_OWNERSTR = " ✪ ⦙  قائمة القنوات التي تمتلك فيها هنا **\n\n"
-GROUPS_STR = " ◈ ⦙  قائمة المجموعات التي أنت فيها موجود هنا **\n\n"
+GROUPS_STR = " ✪ ⦙  قائمة المجموعات التي أنت فيها موجود هنا **\n\n"
 GROUPS_ADMINSTR = " ✪ ⦙  قائمة المجموعات التي تكون مسؤولاً فيها هنا **\n\n"
 GROUPS_OWNERSTR = " ✪ ⦙  قائمة المجموعات التي تمتلك فيها هنا **\n\n"
 INVALID_MEDIA = " ✪ ⦙  إمتداد هذه الصورة غير صالح  ❌**"
@@ -102,12 +102,12 @@ idee = gvarstatus("OR_ID") or "ايدي"
 OR_NAMEAUTO = gvarstatus("OR_NAMEAUTO") or "اسم وقتي"
 OR_AUTOBIO = gvarstatus("OR_AUTOBIO") or "نبذه وقتيه"
 digitalpfp = gvarstatus("AUTO_PIC") or "https://telegra.ph/file/22aa9c0c7e5d8a04ceb30.jpg"
-NAME_OK = " ◈ ⦙  تم تغيير اسم حسابك بنجاح  ✅**"
+NAME_OK = " ✪ ⦙  تم تغيير اسم حسابك بنجاح  ✅**"
 USERNAME_SUCCESS = " ✪ ⦙  تم تغيير معرّف حسابك بنجاح  ✅**"
 USERNAME_TAKEN = " ✪ ⦙  هذا المعرّف مستخدم  ❌**"
 plugin_category = "tools"
 DEFAULTUSER = gvarstatus("FIRST_NAME") or ALIVE_NAME
-DEFAULTUSERBIO = gvarstatus("DEFAULT_BIO") or "@EITHON1"
+DEFAULTUSERBIO = gvarstatus("DEFAULT_BIO") or "@EITHON1 الحمدلله"
 DEFAULTUSER = AUTONAME or Config.ALIVE_NAME
 LOGS = logging.getLogger(__name__)
 async def runcmd(cmd: str) -> Tuple[str, str, int, int]:
@@ -972,7 +972,7 @@ async def stats(event):
             catevent,
             output,
             caption=caption        )
-@iqqhtani.iq_cmd(pattern="حفظ كتابه$")
+@iqqhtani.iq_cmd(pattern="حفض كتابه$")
 async def saf(e):
     x = await e.get_reply_message()
     if not x:
@@ -983,7 +983,7 @@ async def saf(e):
         await e.client.send_message(e.sender_id, x)
     await eor(e, "تم حفظ الرسالة", time=5)
 
-@iqqhtani.iq_cmd(pattern="حفظ توجيه$")
+@iqqhtani.iq_cmd(pattern="حفض توجيه$")
 async def saf(e):
     x = await e.get_reply_message()
     if not x:
@@ -1016,7 +1016,7 @@ async def _(event):
         r_msg = await event.get_reply_message()
         if r_msg.media:
             bot_api_file_id = pack_bot_file_id(r_msg.media)
-            await edit_or_reply(                event,                f" ✪ ⦙   آيـدي الدردشــــة  💠 : **`{str(event.chat_id)}` \n ✪ ⦙   آيـدي المُستخدم  💠 : **`{str(r_msg.sender_id)}` \n ◈ ⦙  آيـدي الميديـا  🆔 : **`{bot_api_file_id}`"            )
+            await edit_or_reply(                event,                f" ✪ ⦙   آيـدي الدردشــــة  💠 : **`{str(event.chat_id)}` \n ✪ ⦙   آيـدي المُستخدم  💠 : **`{str(r_msg.sender_id)}` \n ✪ ⦙  آيـدي الميديـا  🆔 : **`{bot_api_file_id}`"            )
         else:
             await edit_or_reply(                event,                f" ✪ ⦙   آيـدي الدردشــــة  💠 : **`{str(event.chat_id)}` 𖥻\n ✪ ⦙   آيـدي المُستخدم  💠 : **`{str(r_msg.sender_id)}` "            )
 
@@ -1279,11 +1279,11 @@ async def fetch_info(replied_user, event):
     username = "@{}".format(username) if username else ("ليس لديه معرف")
     user_bio = "لايوجد نبذه" if not user_bio else user_bio
     caption = "<b>𓍹ⵧⵧⵧⵧⵧⵧⵧⵧ⁦⁦ⵧⵧⵧⵧⵧⵧⵧⵧ𓍻</b>\n"
-    caption += f"<b>• 🔱 | الاســم  :  </b> {first_name} {last_name}\n"
-    caption += f"<b>• 🔱 | الــمــ؏ــࢪف  : </b> {username}\n"
-    caption += f"<b>• 🔱️ | الايــدي  :  </b> <code>{user_id}</code>\n"
-    caption += f"<b>• 🔱️ | ؏ــدد صــوࢪ  : </b> {replied_user_profile_photos_count}\n"
-    caption += f"<b>• 🔱️ | الـحـسـاب  :  </b> "
+    caption += f"<b>• ⚜️ | الاســم  :  </b> {first_name} {last_name}\n"
+    caption += f"<b>• ⚜️ | الــمــ؏ــࢪف  : </b> {username}\n"
+    caption += f"<b>• ⚜️ | الايــدي  :  </b> <code>{user_id}</code>\n"
+    caption += f"<b>• ⚜️ | ؏ــدد صــوࢪ  : </b> {replied_user_profile_photos_count}\n"
+    caption += f"<b>• ⚜️ | الـحـسـاب  :  </b> "
     caption += f' <a href="tg://user?id={user_id}">{first_name}{last_name}</a> \n'
     caption += "<b>𓍹ⵧⵧⵧⵧⵧⵧⵧⵧ⁦⁦ⵧⵧⵧⵧⵧⵧⵧⵧ𓍻</b>\n"
     return photo, caption
@@ -1320,7 +1320,7 @@ async def _(event):
     try:
         dc_id, location = get_input_location(replied_user.profile_photo)
     except Exception:
-        dc_id = " عذرا لانستطيع على جلب المعلومات الخاصه له!"
+        dc_id = " عذرا لانقدر على جلب المعلومات الخاصه له!"
     if spamwatch:
         ban = spamwatch.get_ban(user_id)
         if ban:
@@ -1458,7 +1458,7 @@ async def _(event):
     while not downloader.isFinished():
         pass
     if gvarstatus(f"{OR_FOTOAUTO}") is not None and gvarstatus(f"{OR_FOTOAUTO}") == "true":
-        return await edit_delete(event, f" ◈ ⦙  صوره وقتيه مفعّلـة بالفعـل !**")
+        return await edit_delete(event, f" ✪ ⦙  صوره وقتيه مفعّلـة بالفعـل !**")
     addgvar(f"{OR_FOTOAUTO}", True)
     await edit_delete(event, f" ✪ ⦙  تـمّ بـدأ الصـورة الديجيتـال بواسطـة المستخـدم ✓**")
     await digitalpicloop()
@@ -1645,7 +1645,7 @@ async def _(event):
     if gvarstatus(f"{OR_NAMEAUTO}") is not None and gvarstatus(f"{OR_NAMEAUTO}") == "true":
         return await edit_delete(event, f" ✪ ⦙  الإسـم الوقتـي قيـد التشغيـل بالفعـل !**")
     addgvar(f"{OR_NAMEAUTO}", True)
-    await edit_delete(event, " ◈ ⦙  تـمّ بـدأ الإسـم الوقتـي بواسطـة المستخـدم ✓**")
+    await edit_delete(event, " ✪ ⦙  تـمّ بـدأ الإسـم الوقتـي بواسطـة المستخـدم ✓**")
     await autoname_loop()
 @iqqhtani.on(admin_cmd(pattern=f"{OR_AUTOBIO}(?: |$)(.*)"))
 async def _(event):
@@ -2325,20 +2325,20 @@ async def _(event):  # sourcery no-metrics
             delgvar(f"{OR_FOTOAUTO}")
             await event.client(
                 functions.photos.DeletePhotosRequest(                    await event.client.get_profile_photos("me", limit=1)                )            )
-            return await edit_delete(event, " ◈ ⦙  تم إيقـاف  صوره وقتيه الآن ✓**")
-        return await edit_delete(event, " ◈ ⦙  لم يتـم تفعيـل صوره وقتيه ✕**")
+            return await edit_delete(event, " ✪ ⦙  تم إيقـاف  صوره وقتيه الآن ✓**")
+        return await edit_delete(event, " ✪ ⦙  لم يتـم تفعيـل صوره وقتيه ✕**")
     if input_str == f"{OR_NAMEAUTO}":
         if gvarstatus(f"{OR_NAMEAUTO}") is not None and gvarstatus(f"{OR_NAMEAUTO}") == "true":
             delgvar(f"{OR_NAMEAUTO}")
             await event.client(                functions.account.UpdateProfileRequest(first_name=DEFAULTUSER)            )
-            return await edit_delete(event, " ◈ ⦙  تم إيقـاف الإسـم الوقتـي الآن ✓**")
-        return await edit_delete(event, " ◈ ⦙  لم يتـم تفعيـل الإسـم الوقتـي ✕**")
+            return await edit_delete(event, " ✪ ⦙  تم إيقـاف الإسـم الوقتـي الآن ✓**")
+        return await edit_delete(event, " ✪ ⦙  لم يتـم تفعيـل الإسـم الوقتـي ✕**")
     if input_str == f"{OR_AUTOBIO}":
         if gvarstatus(f"{OR_AUTOBIO}") is not None and gvarstatus(f"{OR_AUTOBIO}") == "true":
             delgvar(f"{OR_AUTOBIO}")
             await event.client(                functions.account.UpdateProfileRequest(about=DEFAULTUSERBIO)            )
-            return await edit_delete(event, " ◈ ⦙  تم إيقـاف البايـو التلقائـي الآن ✓**")
-        return await edit_delete(event, " ◈ ⦙  لم يتـم تفعيـل البايـو التلقائـي ✕**")
+            return await edit_delete(event, " ✪ ⦙  تم إيقـاف البايـو التلقائـي الآن ✓**")
+        return await edit_delete(event, " ✪ ⦙  لم يتـم تفعيـل البايـو التلقائـي ✕**")
     END_CMDS = [f"{OR_FOTOAUTO}", f"{OR_NAMEAUTO}", f"{OR_AUTOBIO}",]
     if input_str not in END_CMDS:
         await edit_delete(            event,            f"✪ ⦙   {input_str} أمـر الإنهـاء غيـر صالـح، اذڪـر بوضـوح ما يجـب أن أنهـي !",            parse_mode=_format.parse_pre        )
